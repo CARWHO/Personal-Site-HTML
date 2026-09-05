@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ray tracer</title>
+</head>
+<body>
+
+<p><a href="index.html">Kahu Hutton</a></p>
+
+<h1>Ray tracer</h1>
+<p>2025. <a href="https://github.com/CARWHO/Ray-tracing">github.com/CARWHO/Ray-tracing</a></p>
+<p><img src="assets/raytracer.jpg" alt="Render from the path tracer: spheres of glass, metal, and diffuse materials on a ground plane" width="700"></p>
+<p>A path tracer in C++ following Peter Shirley's <i>Ray Tracing in One Weekend</i> series. A learning exercise, written by hand. Some of the boilerplate came from the book.</p>
+<ul>
+<li>Indirect lighting, so objects illuminate each other.</li>
+<li>Anti-aliasing by random sampling.</li>
+<li>Materials: Lambertian diffuse, metals, and glass.</li>
+<li>Adjustable camera position and focus depth.</li>
+</ul>
+<p>Each pixel fires multiple rays with slight random offsets. Rays bounce around the scene accumulating colour until they hit a light source or run out of bounces.</p>
+<p>Glass was the trickiest part. It needed Schlick's approximation for reflectance at grazing angles, otherwise the edges looked wrong.</p>
+<p>Renders to PPM. The image above took about two minutes at 1200 by 800 with 500 samples per pixel.</p>
+
+<hr>
+<p><a href="index.html">Back</a></p>
+
+</body>
+</html>
