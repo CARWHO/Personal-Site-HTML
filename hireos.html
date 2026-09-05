@@ -16,15 +16,29 @@
 
 <p>Accent Productions is my dad's company and was the first pilot, same client as the <a href="accent-productions.html">2024 wind load analysis</a>. The other four came after the pilot worked.</p>
 
-<p>Here is what it does. A customer fills in the company's public form or rings their number. An AI pipeline drafts a proposal from what they said, the RMS prices it, and the company gets an email. From there the booking goes through quoting, approval, payment, and crewing in the admin workspace, and the numbers land in Xero. Jobs arrive drafted and priced. The company checks them instead of typing them.</p>
+<h2>What it does</h2>
+
+<p>A customer fills in the company's public form or rings their number. An AI pipeline drafts a proposal from what they said, the RMS prices it, and the company gets an email. From there the booking goes through quoting, approval, payment, and crewing in the admin workspace, and the numbers land in Xero.</p>
+
+<p>Jobs arrive drafted and priced. The company checks them instead of typing them.</p>
+
+<h2>How it is built</h2>
 
 <p>Go 1.26 with chi, pgx against Postgres, goose for migrations. Google Cloud for Cloud Run, Cloud SQL, Cloud Tasks, Cloud Storage, Firebase auth, and gRPC. React with react-router on Bun workspaces, and Astryx, a StyleX design system. The admin workspace lives at workspace.hireos.co.nz and the customer and contractor token pages at app.hireos.co.nz.</p>
 
 <p>It is two repos, the RMS and the intake service, and both are run like a proper engineering team would run them even though it is one person lol. Every architecture decision is written up as an ADR before the code changes, nineteen so far, and a decision on record does not get relitigated without a superseding one. All the infrastructure is Terraform: Cloud Run services, Cloud SQL, IAM, load balancers, secrets, alerting, billing budgets. Nothing is clicked together in a console.</p>
 
-<p>CI runs on every pull request and every push to main. Go tests run against a real Postgres with the migrations applied first, so a migration that fails to apply fails CI instead of failing at deploy. Frontend gets eslint, tsc, and vitest across the three workspaces. Jobs are path-filtered, so a docs-only change does not run every suite, and a single aggregate check is the branch protection gate. Green on main deploys itself: the Go services build to a container and roll out to Cloud Run, the frontends go to Firebase Hosting. Deploys authenticate to Google Cloud through workload identity federation, no long-lived keys in GitHub. Deploy jobs only change the image, everything else stays owned by Terraform, because an env var set out of band once got silently deleted by the next apply and took the inquiry pipeline down. That is written up too.</p>
+<h2>CI/CD</h2>
 
-<p>Cloud cost gets the same attention. Cloud Run scales to zero when nobody is using it and CPU is only allocated while a request is in flight, except for the phone receptionist, which needs it held open for the call. Three load balancers got merged into one forwarding rule on one IP. The database sits on the smallest tier that works. A Terraform-managed billing budget emails me at 50, 90, and 100 percent of the expected monthly spend, and the path-filtered CI keeps GitHub Actions minutes down as well.</p>
+<p>CI runs on every pull request and every push to main. Go tests run against a real Postgres with the migrations applied first, so a migration that fails to apply fails CI instead of failing at deploy. Frontend gets eslint, tsc, and vitest across the three workspaces. Jobs are path-filtered, so a docs-only change does not run every suite, and a single aggregate check is the branch protection gate.</p>
+
+<p>Green on main deploys itself. The Go services build to a container and roll out to Cloud Run, the frontends go to Firebase Hosting. Deploys authenticate to Google Cloud through workload identity federation, no long-lived keys in GitHub. Deploy jobs only change the image, everything else stays owned by Terraform, because an env var set out of band once got silently deleted by the next apply and took the inquiry pipeline down. That is written up too.</p>
+
+<h2>Keeping it cheap</h2>
+
+<p>Cloud Run scales to zero when nobody is using it and CPU is only allocated while a request is in flight, except for the phone receptionist, which needs it held open for the call. Three load balancers got merged into one forwarding rule on one IP. The database sits on the smallest tier that works. A Terraform-managed billing budget emails me at 50, 90, and 100 percent of the expected monthly spend, and the path-filtered CI keeps GitHub Actions minutes down as well.</p>
+
+<h2>Size</h2>
 
 <p>The RMS is about 172,000 lines of Go, TypeScript, TSX, and SQL over 454 commits since 9 July 2026. Intake is another 76,000 lines and 474 commits over the same period. Repos are private :)</p>
 
