@@ -20,11 +20,15 @@
 <li>TES Hire</li>
 <li>The Rock Factory</li>
 </ul>
-<p>Accent Productions is my dad's company and was the first pilot. It is also the client from the <a href="projects.html#accent-productions">2024 wind load analysis</a>. The other four came after the pilot proved the product worked.</p>
+<p>Accent Productions is my dad's company and was the first pilot. It is also the client from the <a href="accent-productions.html">2024 wind load analysis</a>. The other four came after the pilot proved the product worked.</p>
+
+<hr>
 
 <h2>What it does</h2>
 <p>A customer fills in a company's public form or rings the company's number. An AI pipeline drafts a proposal from what they said, the RMS turns it into a priced draft, and the company gets an email. From there the company works the booking through quoting, approval, payment, and crewing in an admin workspace, and the numbers land in Xero.</p>
 <p>So a job arrives already drafted and priced, and the company's first action is to check it rather than to type it.</p>
+
+<hr>
 
 <h2>Two halves</h2>
 <p>HireOS is one product in two repos, and the split is the most interesting decision in it.</p>
@@ -39,13 +43,19 @@
 <h3>Two sign-ins</h3>
 <p>Intake has its own sign-in, deliberately not shared with the RMS's table of the same name. Two products, two sign-ins, two databases. Someone who works at a company running both signs into both.</p>
 
+<hr>
+
 <h2>The phone path</h2>
 <p>Calls run over SIP with a control-only sideband. Tenant resolution for a call is a custom SIP header. An answered call is an intake path, the same as a form submission. A receptionist answers, and a caller-directory match can recognise a number that already belongs to a contractor or supplier.</p>
 <p>The rule that holds it together: the transcript proposes, it never writes. Nothing a caller says lands in a booking without a person confirming it.</p>
 
+<hr>
+
 <h2>Vocabulary as a design tool</h2>
 <p>Before the split, the repo got a context document that defines every term in the domain, with an explicit list of synonyms not to use. Company, not client, tenant, or account. Customer, not client or contact. Contractor, not crew or freelancer. Writing the glossary first, with the banned words, was worth more than it looked. Once the product spanned two repos, two teams of agents, and a Backend interface, having one name per thing meant an ADR written on one side was readable on the other without translation.</p>
 <p>The decisions themselves are recorded in architecture decision records, eighteen of them at the time of writing. The split, the Backend interface, the SIP sideband, the header-based tenant resolution, the call-as-intake-path, and the transcript rule are each one record.</p>
+
+<hr>
 
 <h2>Stack</h2>
 <ul>
@@ -55,6 +65,8 @@
 <li>Xero for accounting</li>
 <li>Admin workspace at workspace.hireos.co.nz, customer and contractor token pages at app.hireos.co.nz</li>
 </ul>
+
+<hr>
 
 <h2>Scale</h2>
 <ul>

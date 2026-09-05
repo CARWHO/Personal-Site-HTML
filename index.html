@@ -14,82 +14,41 @@
 <a href="https://github.com/carwho">github</a> ·
 <a href="https://www.linkedin.com/in/kahu-hutton/">linkedin</a> ·
 <a href="mailto:kahuhutton.business@gmail.com">contact</a> ·
-<a href="assets/Resume.pdf">resume</a> ·
-<a href="#work">work</a> ·
-<a href="#projects">projects</a> ·
-<a href="#writing">writing</a>
+<a href="assets/Resume.pdf">resume</a>
 </p>
 
 <hr>
 
 <p>I am finishing a Bachelor of Electrical Engineering with Honours at the University of Canterbury. From September 2025 to April 2026 I was a product engineer at NextWork, in Wellington and briefly in Austin, where I built the LLM pipeline that now writes every one of their learning modules. Before that I interned at Dawn Aerospace on spacecraft propulsion test systems. On my own I build and sell HireOS, a rental management system that runs at five equipment-rental companies.</p>
 
-<p>The pattern across most of this: do the thing by hand until I know what good looks like, then automate against that standard. Twenty learning modules written before the pipeline. Every line of Snippetbox typed. Book notes the digest tool is forbidden from writing. The <a href="claude-code.html">Claude Code page</a> is about that.</p>
+<p>The pattern across most of this: do the thing by hand until I know what good looks like, then automate against that standard. Twenty learning modules written before the pipeline. Every line of Snippetbox typed. Book notes the digest tool is forbidden from writing.</p>
 
 <p>Away from a keyboard: enduro mountain bike racing and long distance running.</p>
 
 <hr>
 
-<h2 id="work">Work</h2>
+<h2>Work</h2>
+<ul>
+<li><a href="nextwork.html">NextWork</a>, product engineer, 2025 to 2026. Built the LLM pipeline that writes their learning modules.</li>
+<li><a href="dawn-aerospace.html">Dawn Aerospace</a>, propulsion development intern, 2024 to 2025. Feedline characterisation and life-cycle test automation. Password protected.</li>
+<li><a href="kora.html">KORA</a>, founder, 2024. An LMS plugin that generates and grades course content with RAG.</li>
+<li><a href="halo-vision.html">Halo-Vision</a>, project lead, 2023 to 2024. A heads-up display for motorcycle helmets.</li>
+<li><a href="accent-productions.html">Accent Productions</a>, 2024. CFD wind load analysis of a stage cover.</li>
+</ul>
 
-<h3>NextWork, product engineer</h3>
-<p>September 2025 to April 2026. Wellington, then briefly Austin, Texas.</p>
-<p>NextWork teaches people to use AI coding tools through hands-on learning modules, with over 200,000 users. I wrote about twenty modules by hand first, to find out what a good one looked like, then built the multi-stage LLM pipeline that writes all of them now: brainstorm, staged research through MCP tools, then compilation against a large rule set into block-structured JSON. Writing a module went from over a week to under a day. I also introduced AI coding tools across the team and recorded over forty walkthroughs.</p>
-<p><a href="nextwork.html">Read more</a></p>
+<h2>Projects</h2>
+<ul>
+<li><a href="hireos.html">HireOS</a>, 2026. A rental management system, built and sold solo, live at five companies.</li>
+<li><a href="snippetbox.html">Snippetbox</a>. A Go web app, every line written by hand.</li>
+<li><a href="reaction-timer.html">FPGA reaction timer</a>, 2025. VHDL on a Nexys-4 DDR.</li>
+<li><a href="step-counter.html">STM32 step counter</a>, 2024. Firmware with an IMU and an OLED.</li>
+</ul>
 
-<h3>Dawn Aerospace, spacecraft propulsion development intern</h3>
-<p>November 2024 to February 2025. Four hundred hours, Christchurch.</p>
-<p>Two projects. First, characterising a propellant feedline's thermal and electrical behaviour inside a vacuum chamber: a test jig, vacuum-safe cabling, a GUI over a local YAMCS server, and the analysis. Second, automating month-long life-cycle tests of satellite electronics: an igniter test box, ten controller nodes daisy-chained on CAN with RS422 to switch busses, and Grafana dashboards that alert when a sensor stops moving. Both shipped in Dawn's ISP release.</p>
-<p>The write-up names components and test results that are not public, so the page is encrypted. <a href="mailto:kahuhutton.business@gmail.com">Email me</a> for the password.</p>
-<p><a href="dawn-aerospace.html">Read more (password)</a></p>
-
-<h3>KORA, founder and developer</h3>
-<p>2024.</p>
-<p>An LMS plugin that generates and grades course content using retrieval-augmented generation against a university's own material. Funded by Google Cloud, entered in the Lee Kuan Yew Global Business Plan Competition. I built the web app and ran a team of three.</p>
-<p><a href="kora.html">Read more</a></p>
-
-<h3>Halo-Vision, project lead</h3>
-<p>December 2023 to August 2024.</p>
-<p>An open-source heads-up display for motorcycle helmets: turn-by-turn navigation and safety notifications, with custom PCBs, firmware, helmet mounts, and a mobile app. CFD and wind tunnel testing of the mount at riding speed.</p>
-<p><a href="projects.html#halo-vision">Read more</a> · <a href="https://github.com/CARWHO/Halo-Vision">github</a></p>
-
-<h3>Accent Productions, wind load analysis</h3>
-<p>March 2024.</p>
-<p>A CFD wind load analysis of a stage cover in Autodesk CFD and SolidWorks, 10 to 60 km/h, reconciling the client's own tests against simulation and recommending rope and mounting changes. Accent Productions is my dad's company. Two years later it was the first pilot for HireOS.</p>
-<p><a href="projects.html#accent-productions">Read more</a></p>
-
-<hr>
-
-<h2 id="projects">Projects</h2>
-
-<h3>HireOS</h3>
-<p>July 2026 to present. Live at five equipment-rental companies.</p>
-<p>A rental management system for equipment hire companies, built and sold on my own. A customer fills in a company's public form or rings its number, an intake pipeline drafts and prices the job, and the company works the booking through quoting, approval, payment, and crewing. Two repos: the intake half and the RMS half, split into separate services and databases in August 2026. Go, Postgres, React, Google Cloud, Xero. About 250,000 lines and 900 commits so far.</p>
-<p><a href="hireos.html">Read more</a></p>
-
-<h3>Snippetbox</h3>
-<p>A Go web app from Alex Edwards' <i>Let's Go</i>: paste some text, give it an expiry, share the link. A learning exercise before building a more serious web app. Every line written by hand, nothing generated.</p>
-<p><a href="projects.html#snippetbox">Read more</a> · <a href="https://github.com/CARWHO/snippet-box">github</a></p>
-
-<h3>FPGA reaction timer</h3>
-<p>March 2025.</p>
-<p>A reaction timer in VHDL on a Nexys-4 DDR: a finite state machine, seven-segment statistics, random delays so you cannot anticipate the prompt, and an ALU for average, best, and worst.</p>
-<p><a href="projects.html#reaction-timer">Read more</a> · <a href="https://github.com/CARWHO/FPGA-Reaction-Timer">github</a></p>
-
-<h3>STM32 step counter</h3>
-<p>2024.</p>
-<p>Firmware for a step counter on an STM32 Nucleo with an LSM6DS IMU and an SSD1306 OLED. Filtered accelerometer data and peak detection, cooperative multitasking at about 40% CPU load, every task measured against its deadline.</p>
-<p><a href="projects.html#step-counter">Read more</a> · <a href="https://github.com/CARWHO/Step-Counter">github</a></p>
-
-<hr>
-
-<h2 id="writing">Writing</h2>
-
-<h3><a href="claude-code.html">How I use Claude Code</a></h3>
-<p>Two Obsidian vaults with opposite rules, and the code repos with a third set. The personal vault has a skill that reads a book and refuses to write the notes. The university vault refuses to touch graded work. The code repos get audits, worktrees, and as much automation as I can verify. Same tool, three settings.</p>
-
-<h3><a href="books.html">Books</a></h3>
-<p>Reading notes, not reviews. Zero to One, The Mom Test, Obviously Awesome, Gap Selling, The Ideal Team Player, No Pit Stops, A Philosophy of Software Design, Disciplined Entrepreneurship.</p>
+<h2>Writing</h2>
+<ul>
+<li><a href="claude-code.html">How I use Claude Code</a>. Two vaults with opposite rules, and the code repos with a third.</li>
+<li><a href="books.html">Books</a>. Reading notes, one page per book.</li>
+</ul>
 
 <hr>
 

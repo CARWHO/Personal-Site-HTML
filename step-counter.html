@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STM32 step counter</title>
+</head>
+<body>
+
+<p><a href="index.html">Kahu Hutton</a></p>
+
+<h1>STM32 step counter</h1>
+<p>2024. <a href="https://github.com/CARWHO/Step-Counter">github.com/CARWHO/Step-Counter</a></p>
+<p><img src="assets/RCAP-Schematic.jpg" alt="Step counter hardware schematic" width="600"></p>
+<p>Firmware for a step counter on an STM32 Nucleo board, with an LSM6DS IMU for step detection and an SSD1306 OLED for display.</p>
+<ul>
+<li>Step detection from a moving-average filtered accelerometer signal. The squared magnitude of the three axes is compared against a threshold on a rising edge, with hysteresis to stop double counting.</li>
+<li>Modular C firmware under cooperative multitasking: a super-loop polls each module at a fixed rate, and every task was timed with a hardware timer and checked against its period. Roughly 40% CPU load.</li>
+<li>User-settable step goals via potentiometer, audible alerts, a test mode that simulates steps from the joystick, and UART telemetry toggled by a button.</li>
+<li>Joystick and hardware buttons drive the display modes: step count, distance, goal, and progress.</li>
+</ul>
+
+<hr>
+<p><a href="index.html">Back</a></p>
+
+</body>
+</html>
