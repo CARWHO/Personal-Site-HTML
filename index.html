@@ -22,6 +22,44 @@
 
 <p>I enjoy enduro mountain bike racing and long distance running :)</p>
 
+<p><img id="photo" src="assets/photos/mtb.jpg" alt="Riding an enduro trail through the pines" width="600"></p>
+<p><a href="#" id="photo-prev">previous</a> · <span id="photo-count">1 / 11</span> · <a href="#" id="photo-next">next</a></p>
+<script>
+(function () {
+  var photos = [
+  ["assets/photos/mtb.jpg", "Riding an enduro trail through the pines"],
+  ["assets/photos/z4.jpg", "The Z4 parked up by the coast in Wellington"],
+  ["assets/photos/disc-golf.jpg", "Disc golf with mates"],
+  ["assets/photos/retreat-talks.jpg", "A founder talk at the NextWork off-site"],
+  ["assets/photos/summer-plan.jpg", "The summer plan going up on the screen"],
+  ["assets/photos/fireside.jpg", "Fireside chat at the off-site"],
+  ["assets/photos/fireside-2.jpg", "More of the fireside chat"],
+  ["assets/photos/carry.jpg", "Carrying a teammate across the lawn"],
+  ["assets/photos/rookie.jpg", "Rookie of the year"],
+  ["assets/photos/hat.jpg", "The hat"],
+  ["assets/photos/dinner.jpg", "Dinner at the off-site"]
+  ];
+  var i = 0;
+  var img = document.getElementById("photo");
+  var count = document.getElementById("photo-count");
+  var timer;
+  function show(n) {
+    i = (n + photos.length) % photos.length;
+    img.src = photos[i][0];
+    img.alt = photos[i][1];
+    count.textContent = (i + 1) + " / " + photos.length;
+  }
+  function restart() {
+    clearInterval(timer);
+    timer = setInterval(function () { show(i + 1); }, 5000);
+  }
+  document.getElementById("photo-prev").onclick = function (e) { e.preventDefault(); show(i - 1); restart(); };
+  document.getElementById("photo-next").onclick = function (e) { e.preventDefault(); show(i + 1); restart(); };
+  photos.forEach(function (p) { new Image().src = p[0]; });
+  restart();
+})();
+</script>
+
 <hr>
 
 <h2>Work</h2>
