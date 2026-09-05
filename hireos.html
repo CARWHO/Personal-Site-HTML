@@ -18,18 +18,18 @@
 
 <h2>What it does</h2>
 
-<p>A customer fills in the company's form or rings their number. An AI pipeline drafts a proposal, the RMS prices it, and the company gets an email. Quoting, approval, payment, and crewing happen in the admin workspace and the numbers land in Xero. Jobs arrive drafted and priced. The company checks them instead of typing them.</p>
+<p>A customer fills in the company's form or rings their number. An AI pipeline drafts a proposal, HireOS prices it, and the company gets an email. Quoting, approval, payment, and crewing happen in the admin workspace and the numbers land in Xero. Jobs arrive drafted and priced. The company checks them instead of typing them.</p>
 
 <h2>The important bits</h2>
 
 <ul>
-<li>Two repos. Intake owns the form, the phone number, and an AI receptionist that answers calls over SIP, transcribes, and extracts the request. The transcript only ever proposes, it never writes the booking. The RMS owns pricing, bookings, documents, payments, crewing, and Xero.</li>
+<li>An AI receptionist answers the company's phone over SIP, transcribes the call, and extracts the request. The transcript only ever proposes, it never writes the booking.</li>
 <li>Go 1.26 with chi, pgx against Postgres, goose migrations. Cloud Run, Cloud SQL, Cloud Tasks, Firebase auth. React with react-router on Bun workspaces and Astryx, a StyleX design system.</li>
 <li>Gear allocation runs under Postgres advisory locks so two jobs cannot book the same kit for the same dates.</li>
 <li>Customers and contractors never sign in. Each action is its own link token: approve, pay deposit, pay balance, pay contractor, feedback.</li>
 <li>Run like a proper engineering team even though it is one person lol. Nineteen ADRs, and a decision on record is not relitigated without a superseding one. All infrastructure is Terraform, nothing clicked together in a console.</li>
 <li>CI on every PR and push. Go tests run against a real Postgres with migrations applied first, frontends get eslint, tsc, and vitest, jobs are path-filtered behind one gate. Green on main deploys itself to Cloud Run and Firebase Hosting through workload identity federation, no long-lived keys. Kept cheap too: Cloud Run scales to zero, three load balancers merged into one, smallest database tier that works, and a Terraform billing budget that emails at 50, 90, and 100 percent of expected spend.</li>
-<li>Since 9 July 2026: about 248,000 lines of Go, TypeScript, TSX, and SQL, 928 commits, 338 pull requests, 105 issues with 100 closed. Repos are private :)</li>
+<li>Since 9 July 2026: about 248,000 lines of Go, TypeScript, TSX, and SQL, 928 commits, 338 pull requests, 105 issues with 100 closed. Code is private :)</li>
 </ul>
 
 <p><a href="index.html">Back</a></p>
