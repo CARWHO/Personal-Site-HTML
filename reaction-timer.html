@@ -14,9 +14,9 @@
 <p><img src="assets/FPGA.jpg" alt="Nexys-4 DDR running the reaction timer" width="600"></p>
 <p>A reaction timer in VHDL on a Nexys-4 DDR. A finite state machine controls the sequence, seven-segment displays show the statistics, and random delays stop the user anticipating the prompt.</p>
 <ul>
-<li>VHDL finite state machine controlling the sequential timer process.</li>
-<li>Interface from LEDs, seven-segment displays, and push buttons, with error handling for premature inputs.</li>
-<li>An ALU computing average, best, and worst reaction times, validated with Vivado simulations.</li>
+<li>FSM in VHDL driving the timer sequence.</li>
+<li>LEDs, seven-segment displays, and push buttons for the interface, with error handling for early presses.</li>
+<li>ALU for average, best, and worst times, checked in Vivado simulation.</li>
 <li>Configurable test parameters and random delay generation.</li>
 </ul>
 
