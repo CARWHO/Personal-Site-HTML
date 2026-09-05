@@ -16,7 +16,7 @@
 
 <p>Firmware for a step counter on an STM32 Nucleo with an LSM6DS IMU and an SSD1306 OLED. Steps come from a moving-average filtered accelerometer signal: the squared magnitude of the three axes is compared against a threshold on a rising edge, with hysteresis so one step doesn't count twice.</p>
 
-<p>The firmware is modular C under cooperative multitasking. A super-loop polls each module at a fixed rate, and every task was timed with a hardware timer and checked against its period. About 40% CPU load. The joystick and buttons switch between step count, distance, goal, and progress on the display. You set a daily goal with a potentiometer, a buzzer tells you when you hit it, there's a test mode that fakes steps from the joystick, and a button toggles UART telemetry.</p>
+<p>The firmware is modular C under cooperative multitasking. A super-loop polls each module at a fixed rate, and every task was timed with a hardware timer and checked against its period. About 40% CPU load. The joystick and buttons switch between step count, distance, goal, and progress on the display. You set a daily goal with a potentiometer, a buzzer tells you when you hit it :), there's a test mode that fakes steps from the joystick, and a button toggles UART telemetry.</p>
 
 <p><a href="index.html">Back</a></p>
 
