@@ -12,40 +12,16 @@
 <h1>HireOS</h1>
 <p>July 2026 to present. <a href="https://hireos.co.nz">hireos.co.nz</a></p>
 
-<p>A rental management system for equipment hire companies. Built and sold solo. Live at five companies:</p>
-<ul>
-<li><a href="https://accent-productions.hireos.co.nz">Accent Productions</a></li>
-<li><a href="https://illumination-optics.hireos.co.nz">Illumination Optics</a></li>
-<li><a href="https://nes-hire.hireos.co.nz">NES Hire</a></li>
-<li><a href="https://tes.hireos.co.nz">TES Hire</a></li>
-<li><a href="https://the-rock-factory.hireos.co.nz">The Rock Factory</a></li>
-</ul>
-<p>Accent Productions is my dad's company and was the first pilot (same client as the <a href="accent-productions.html">2024 wind load analysis</a>). The other four came after the pilot worked.</p>
+<p>A rental management system for equipment hire companies. Built and sold solo. Live at <a href="https://accent-productions.hireos.co.nz">Accent Productions</a>, <a href="https://illumination-optics.hireos.co.nz">Illumination Optics</a>, <a href="https://nes-hire.hireos.co.nz">NES Hire</a>, <a href="https://tes.hireos.co.nz">TES Hire</a>, and <a href="https://the-rock-factory.hireos.co.nz">The Rock Factory</a>.</p>
 
-<hr>
+<p>Accent Productions is my dad's company and was the first pilot, same client as the <a href="accent-productions.html">2024 wind load analysis</a>. The other four came after the pilot worked.</p>
 
-<h2>What it does</h2>
-<p>A customer fills in the company's public form or rings their number. An AI pipeline drafts a proposal from what they said, the RMS prices it, and the company gets an email. From there the booking goes through quoting, approval, payment, and crewing in the admin workspace, and the numbers land in Xero.</p>
-<p>Jobs arrive drafted and priced. The company checks them instead of typing them.</p>
+<p>Here is what it does. A customer fills in the company's public form or rings their number. An AI pipeline drafts a proposal from what they said, the RMS prices it, and the company gets an email. From there the booking goes through quoting, approval, payment, and crewing in the admin workspace, and the numbers land in Xero. Jobs arrive drafted and priced. The company checks them instead of typing them.</p>
 
-<h2>Stack</h2>
-<ul>
-<li>Go 1.26, chi, pgx against Postgres, goose migrations</li>
-<li>Google Cloud: Cloud Tasks, Cloud Storage, Firebase auth, gRPC</li>
-<li>React with react-router on Bun workspaces. Astryx (a StyleX design system)</li>
-<li>Admin workspace at workspace.hireos.co.nz, customer and contractor token pages at app.hireos.co.nz</li>
-</ul>
+<p>Go 1.26 with chi, pgx against Postgres, goose for migrations. Google Cloud for Cloud Tasks, Cloud Storage, Firebase auth, and gRPC. React with react-router on Bun workspaces, and Astryx, a StyleX design system. The admin workspace lives at workspace.hireos.co.nz and the customer and contractor token pages at app.hireos.co.nz.</p>
 
-<hr>
+<p>The RMS is about 172,000 lines of Go, TypeScript, TSX, and SQL over 454 commits since 9 July 2026. Intake is another 76,000 lines and 474 commits over the same period. Repos are private.</p>
 
-<h2>Scale</h2>
-<ul>
-<li>RMS: about 172,000 lines of Go, TypeScript, TSX, and SQL, 454 commits since 9 July 2026</li>
-<li>Intake: about 76,000 lines, 474 commits over the same period</li>
-</ul>
-<p>Repos are private.</p>
-
-<hr>
 <p><a href="index.html">Back</a></p>
 
 </body>

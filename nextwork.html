@@ -9,55 +9,27 @@
 
 <p><a href="index.html">Kahu Hutton</a></p>
 
-<h1>NextWork, product engineer</h1>
-<p>September 2025 to April 2026. Wellington, then Austin for a bit in March 2026, then back to NZ to finish my degree. <a href="https://nextwork.ai/">nextwork.ai</a></p>
+<h1>NextWork</h1>
+<p>Product engineer, September 2025 to April 2026. Wellington, then Austin for a bit in March 2026, then back to NZ to finish my degree. <a href="https://nextwork.ai/">nextwork.ai</a></p>
 
-<hr>
+<p>NextWork makes learning modules that teach people to use AI coding tools. 200,000+ users, three engineers, about eight people all up. While I was there we raised a NZ$7M seed round, which I helped with.</p>
 
-<h2>The company</h2>
-<p>NextWork makes learning modules that teach people to use AI coding tools. 200,000+ users. Three engineers in a company of about eight. Helped raise a NZ$7M seed round while I was there.</p>
+<h2>Stuff I did</h2>
 
-<hr>
+<p>I wrote about twenty modules by hand first, over six months. That set the bar for what a good one looked like. Then I built the pipeline that writes them now.</p>
 
-<h2>Automating the module-writing process</h2>
-<p>Every module NextWork publishes now comes out of a multi-stage LLM pipeline I built.</p>
-<ol>
-<li>Brainstorm what the module should be about.</li>
-<li>Research in stages through MCP tools (Firecrawl, Exa, Context7).</li>
-<li>Compile the module against a big rule set. If it covers X it must do Y, if it does Y it must show Z, if it shows Z it uses wording W.</li>
-</ol>
-<p>Different models at different stages, picked for cost and speed. Output is block-structured JSON, compiled and served to the page. The compiler started in Python and moved to C/C++ and Go once the design settled.</p>
+<p>It brainstorms what the module should be about, researches in stages through MCP tools (Firecrawl, Exa, Context7), then compiles the module against a big rule set. If it covers X it must do Y, if it does Y it must show Z, if it shows Z it uses wording W. Different models at different stages, picked for cost and speed. Out the other end is block-structured JSON, compiled and served to the page. The compiler started in Python and moved to C/C++ and Go once the design settled.</p>
 
-<p>I wrote about twenty modules by hand first, over six months, before automating anything. That set the bar for what a good module looked like, so the pipeline had a real standard to hit.</p>
+<p>Writing a module went from 7+ days to under a day. 20+ modules in the first three months, 50+ since. Weekly active user growth went from flat to about 15% month on month. Every module still gets reviewed before publish, by everyone building social content from it and by the CEO.</p>
 
-<h3>Results</h3>
-<ul>
-<li>Writing a module went from 7+ days to under 1 day.</li>
-<li>20+ modules produced by the pipeline within the first three months, 50+ since.</li>
-<li>Weekly active user growth went from flat to roughly 15% month on month.</li>
-</ul>
-<p>Every module still gets reviewed before publish, by everyone building social content from it and by the CEO.</p>
+<p>I also recorded 40+ video walkthroughs on Claude Code, Cursor, and other AI tools. This is one of them, building an AI finance agent with Amazon Bedrock.</p>
 
-<hr>
-
-<h2>The rest of the role</h2>
-<ul>
-<li>Drove product direction and decided what to ship to grow MRR.</li>
-<li>Wrote the product spec for the core learning module, which is what made automation possible.</li>
-<li>Recorded 40+ video walkthroughs on Claude Code, Cursor, and other AI tools. Example below.</li>
-<li>Introduced AI coding tools across the team and restructured workflows. PR output went up 75% with no drop in quality.</li>
-<li>Migrated the frontend from web components to React in three weeks.</li>
-<li>Built internal tooling in Python and Go for standardising project specs and validating requirements.</li>
-<li>Pushed back on fuzzy requirements before they reached engineering.</li>
-</ul>
-
-<hr>
-
-<h2>Example walkthrough</h2>
-<p>Build an AI finance agent with Amazon Bedrock. <a href="https://www.youtube.com/watch?v=-GaeQDJq1HA">Watch on YouTube</a></p>
 <p><iframe width="560" height="315" src="https://www.youtube.com/embed/-GaeQDJq1HA" title="Build an AI Finance Agent with Amazon Bedrock" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 
-<hr>
+<h2>Other bits I did</h2>
+
+<p>Drove product direction and decided what to ship to grow MRR. Wrote the product spec for the core learning module, which is what made automating it possible. Got AI coding tools into everyone's workflow, PR output went up 75% with no drop in quality. Migrated the frontend from web components to React in three weeks. Built internal tooling in Python and Go for standardising project specs and validating requirements. Pushed back on fuzzy requirements before they reached engineering.</p>
+
 <p><a href="index.html">Back</a></p>
 
 </body>
