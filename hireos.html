@@ -18,7 +18,7 @@
 
 <h2>What it does</h2>
 
-<p>A customer fills in the company's form or rings their number. An AI pipeline drafts a proposal, HireOS prices it, and the company gets an email. Quoting, approval, payment, and crewing happen in the admin workspace and the numbers land in Xero. Jobs arrive drafted and priced. The company checks them instead of typing them.</p>
+<p>A customer fills in the company's form or rings their number. An AI pipeline drafts a proposal, HireOS prices it, and the company gets an email. Quoting, approval, payment, and crewing happen in the admin workspace and the numbers land in Xero. Jobs arrive drafted and priced, so the company only has to check them.</p>
 
 <h2>Selling it</h2>
 
@@ -26,15 +26,15 @@
 
 <ul>
 <li>Research first. Scraped Reddit and three NZ Facebook groups for complaints, then 24 discovery interviews with NZ hire companies, the same five questions every time. 17 of 24 named the same pain: enquiries turn up under-specified and someone has to translate them before they can be quoted.</li>
-<li>Demos are live, not slides. Their own words from the interview read back to them, then I ring the company's number on speaker, the receptionist takes the enquiry, and the drafted job appears in their own Current RMS while they watch. Say what is on screen, then stop talking.</li>
+<li>On a demo I read their own words from the interview back to them, then ring the company's number on speaker, the receptionist takes the enquiry, and the drafted job appears in their own Current RMS while they watch. Say what is on screen, then stop talking.</li>
 <li>Every demo is scripted, transcribed, and the script revised from what landed. An advisor said I was showing the whole product, so now the demo is the wedge only: the phone gets answered, the enquiry comes back written up. The ask is an email address, a number to forward, and a Current RMS sign-in. Free for ten weeks.</li>
 </ul>
 
 <h2>The important bits</h2>
 
 <ul>
-<li>An AI receptionist answers the phone over SIP and writes up the request. The transcript only ever proposes, it never writes the booking.</li>
-<li>Go and Postgres on Cloud Run, React on Bun. Gear allocation runs under advisory locks so two jobs cannot book the same kit. Customers and contractors never sign in, each action is its own link token.</li>
+<li>An AI receptionist answers the phone over SIP and writes up the request as a proposed job. A person confirms it before it becomes a booking.</li>
+<li>Go and Postgres on Cloud Run, React on Bun. Gear allocation runs under advisory locks so two jobs cannot book the same kit. Customers and contractors get one link per action: approve, pay, feedback.</li>
 <li>Run like a proper engineering team even though it is one person lol. Nineteen ADRs, everything in Terraform, CI on every PR against a real Postgres, and green on main deploys itself. Scales to zero and a billing budget emails me before it gets expensive.</li>
 <li>Since 9 July 2026: about 248,000 lines, 928 commits, 338 pull requests, 105 issues. Code is private :)</li>
 </ul>
