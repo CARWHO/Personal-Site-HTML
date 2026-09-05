@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NextWork</title>
+</head>
+<body>
+
+<p><a href="index.html">Kahu Hutton</a></p>
+
+<h1>NextWork, product engineer</h1>
+<p>September 2025 to April 2026. Wellington, New Zealand, with a brief period in Austin, Texas in March 2026 before returning to New Zealand to finish the engineering degree.</p>
+
+<h2>The company</h2>
+<p>NextWork Limited. The product is learning modules that teach people to use AI coding tools, with over 200,000 users. A three-person engineering team inside a company of about eight: designer, engineers, ops, growth, community, and the CEO.</p>
+
+<h2>Automating the module-writing process</h2>
+<p>Every learning module NextWork publishes is now written by a multi-stage LLM orchestration pipeline I built.</p>
+<ol>
+<li><b>Brainstorming.</b> Decide what a project or module should be about.</li>
+<li><b>Staged research.</b> Gather material through MCP tools: Firecrawl, Exa, Context7.</li>
+<li><b>Compilation.</b> Build the module by applying a large set of defined rules with conditional content logic. If the module covers X then it must do Y; if it does Y then it must show Z; if it shows Z then it must use wording W.</li>
+</ol>
+<p>Different models run at different stages, chosen mainly for cost and speed. The output is a block-structured JSON file, compiled and served to the web page. The compiler started in Python, then moved to C/C++ and Go once the design was stable.</p>
+
+<p><b>I wrote the modules by hand first.</b> About twenty of them, over six months, before automating anything. The point was to establish what a good module looked like, so the pipeline had a real standard to hit rather than an imagined one.</p>
+
+<h3>Results</h3>
+<ul>
+<li>Writing a module went from 7+ days to under 1 day.</li>
+<li>20+ modules produced by the pipeline within the first three months, 50+ since.</li>
+<li>Weekly active user growth went from flat to roughly 15% month on month.</li>
+</ul>
+<p>Every module still passes a review before publish. It is read by everyone who builds downstream social content from it, and by the CEO.</p>
+
+<h2>The rest of the role</h2>
+<ul>
+<li>Drove product direction and decided what to ship to grow MRR.</li>
+<li>Authored the product spec for the core learning module that made automation viable.</li>
+<li>Recorded 40+ video walkthroughs on Claude Code, Cursor, and other AI tools.</li>
+<li>Introduced AI coding tools across the team and restructured workflows. PR output went up 75% with no drop in quality.</li>
+<li>Completed a web-components-to-React migration in three weeks.</li>
+<li>Built internal tooling for project spec standardisation and requirement validation, in Python and Go.</li>
+<li>Pushed back on fuzzy requirements before they reached engineering.</li>
+</ul>
+
+<hr>
+<p><a href="index.html">Back</a></p>
+
+</body>
+</html>
