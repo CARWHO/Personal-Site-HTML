@@ -22,29 +22,21 @@
 
 <h2>Selling it</h2>
 
-<p>I built the first version for my dad and then went and asked whether anyone else had the problem, before trying to sell anything. The process is straight out of <a href="books/disciplined-entrepreneurship.html">Disciplined Entrepreneurship</a>, worksheet by worksheet.</p>
+<p>I built the first version for my dad, then went and asked whether anyone else had the problem before trying to sell anything. The process is straight out of <a href="books/disciplined-entrepreneurship.html">Disciplined Entrepreneurship</a>.</p>
 
 <ul>
-<li>Started on the internet. Scraped Reddit (r/livesound, r/techtheatre, r/CommercialAV, r/Filmmakers), three NZ Facebook groups with the admins' permission, and the trade press, and sorted every verbatim complaint into nine themes.</li>
-<li>Then 24 discovery interviews with NZ hire companies in June 2026, most of them through my dad's network. Same five questions every time: walk me through your last job, where does it go wrong, which one hurts most, a kill question, who else should I talk to.</li>
-<li>Coded every interview into a pain matrix. 17 of 24 named the same thing: enquiries turn up under-specified and someone has to translate them before they can be quoted. Three companies had quit dry hire over it, which is a stronger signal than a complaint.</li>
-<li>Picked the beachhead by scoring the segments against the eight criteria in the book. Full-service AV won on access, pain, and the fact the product already existed for one of them.</li>
-<li>Demos are live, not slides. Four slides only: blank, their own words from the interview read back to them, one diagram, the ask. Then I ring the company's number on speaker, the receptionist takes the enquiry, and the drafted job appears in their own Current RMS while they watch. Say what is on screen, stop talking for three seconds, never ask "does that make sense".</li>
-<li>Every demo is prepped from a written script, transcribed afterwards, and the script is revised from what landed and what did not. An advisor watched one and said I was showing the whole product. Now the demo is the wedge only: the phone gets answered, the enquiry comes back written up. The workspace is the upsell.</li>
-<li>One prospect's objection, that an emailed summary still meant retyping it into their system, is why the Current RMS integration got built. Sign in with Current RMS, one click, revoke it whenever.</li>
-<li>The ask at the end is three things and none of them change what they already run: an email address, a phone number to forward, and the Current RMS sign-in. Free for ten weeks and half an hour a fortnight on what it got right.</li>
+<li>Research first. Scraped Reddit and three NZ Facebook groups for complaints, then 24 discovery interviews with NZ hire companies, the same five questions every time. 17 of 24 named the same pain: enquiries turn up under-specified and someone has to translate them before they can be quoted.</li>
+<li>Demos are live, not slides. Their own words from the interview read back to them, then I ring the company's number on speaker, the receptionist takes the enquiry, and the drafted job appears in their own Current RMS while they watch. Say what is on screen, then stop talking.</li>
+<li>Every demo is scripted, transcribed, and the script revised from what landed. An advisor said I was showing the whole product, so now the demo is the wedge only: the phone gets answered, the enquiry comes back written up. The ask is an email address, a number to forward, and a Current RMS sign-in. Free for ten weeks.</li>
 </ul>
 
 <h2>The important bits</h2>
 
 <ul>
-<li>An AI receptionist answers the company's phone over SIP, transcribes the call, and extracts the request. The transcript only ever proposes, it never writes the booking.</li>
-<li>Go 1.26 with chi, pgx against Postgres, goose migrations. Cloud Run, Cloud SQL, Cloud Tasks, Firebase auth. React with react-router on Bun workspaces and Astryx, a StyleX design system.</li>
-<li>Gear allocation runs under Postgres advisory locks so two jobs cannot book the same kit for the same dates.</li>
-<li>Customers and contractors never sign in. Each action is its own link token: approve, pay deposit, pay balance, pay contractor, feedback.</li>
-<li>Run like a proper engineering team even though it is one person lol. Nineteen ADRs, and a decision on record is not relitigated without a superseding one. All infrastructure is Terraform, nothing clicked together in a console.</li>
-<li>CI on every PR and push. Go tests run against a real Postgres with migrations applied first, frontends get eslint, tsc, and vitest, jobs are path-filtered behind one gate. Green on main deploys itself to Cloud Run and Firebase Hosting through workload identity federation, no long-lived keys. Kept cheap too: Cloud Run scales to zero, three load balancers merged into one, smallest database tier that works, and a Terraform billing budget that emails at 50, 90, and 100 percent of expected spend.</li>
-<li>Since 9 July 2026: about 248,000 lines of Go, TypeScript, TSX, and SQL, 928 commits, 338 pull requests, 105 issues with 100 closed. Code is private :)</li>
+<li>An AI receptionist answers the phone over SIP and writes up the request. The transcript only ever proposes, it never writes the booking.</li>
+<li>Go and Postgres on Cloud Run, React on Bun. Gear allocation runs under advisory locks so two jobs cannot book the same kit. Customers and contractors never sign in, each action is its own link token.</li>
+<li>Run like a proper engineering team even though it is one person lol. Nineteen ADRs, everything in Terraform, CI on every PR against a real Postgres, and green on main deploys itself. Scales to zero and a billing budget emails me before it gets expensive.</li>
+<li>Since 9 July 2026: about 248,000 lines, 928 commits, 338 pull requests, 105 issues. Code is private :)</li>
 </ul>
 
 <p><a href="index.html">Back</a></p>
