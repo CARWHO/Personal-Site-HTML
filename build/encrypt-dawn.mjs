@@ -46,7 +46,7 @@ const page = `<!DOCTYPE html>
 <meta name="robots" content="noindex">
 <title>Dawn Aerospace</title>
 </head>
-<body>
+<body leftmargin="32" rightmargin="32">
 
 <p><a href="index.html">Kahu Hutton</a></p>
 
