@@ -47,6 +47,7 @@ const page = `<!DOCTYPE html>
 <title>Dawn Aerospace</title>
 </head>
 <body leftmargin="32" rightmargin="32">
+<font face="Helvetica, Arial, sans-serif">
 
 <p><a href="index.html">Kahu Hutton</a></p>
 
@@ -75,6 +76,7 @@ document.getElementById("f").addEventListener("submit", function (e) {
 });
 </script>
 
+</font>
 </body>
 </html>
 `;
