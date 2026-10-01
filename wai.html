@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wai</title>
+</head>
+<body leftmargin="32" rightmargin="32">
+<font face="Helvetica, Arial, sans-serif">
+
+<p><a href="index.html">Kahu Hutton</a></p>
+
+<h1>Wai</h1>
+<p>2026. 2nd at the <a href="https://saasathon.dev">OpenAI Hackathon</a>. <a href="https://trywai.now">trywai.now</a> · <a href="https://github.com/CARWHO/wai/tree/app">mobile app</a> · <a href="https://github.com/konooboo/wai-web">web app</a></p>
+
+<p>The health monitor for your farm. It does the checking for you. We built a mobile app, a web app and the hardware, and demoed all of it live.</p>
+
+<p><img src="assets/wai-unit.jpg" alt="The Wai sensor unit" width="400"></p>
+
+<p>The unit. ESP32, LoRa radio at 923 MHz, GPS, an ultrasonic water level sensor and a soil moisture probe, in a 3D printed case.</p>
+
+<h2>How it works</h2>
+
+<p>Probe to LoRa (no SIM) to gateway to cloud to AI. Every reading lands live. The AI works out the cause, the fix and how long you've got.</p>
+
+<p><img src="assets/wai-pipeline.jpg" alt="Probe, LoRa, gateway, cloud, AI, app" width="600"></p>
+
+<p>Probes chain over LoRa. Each one reaches 1 to 3 km to the next, so a string of them covers a whole farm with one gateway.</p>
+
+<h2>The app</h2>
+
+<p><img src="assets/wai-app-home.png" alt="Home: alerts, Wai AI guidance and farm health score" width="200"> <img src="assets/wai-app-alert.png" alt="Alert: what's happening, what to do next, what happens if nothing changes" width="200"> <img src="assets/wai-app-insights.png" alt="Insights: fertiliser timing, water, soil and farm summary" width="200"></p>
+
+<p>Farm health score, a map of probes with health and battery, live readings from the real hardware, and Wai AI, which gives suggestions on each probe's current readings. Alerts say what changed, why, what to do, and what it costs if you wait.</p>
+
+<p><img src="assets/wai-unit-in-hand.jpg" alt="Holding the unit at the hackathon" width="400"></p>
+
+<p><a href="index.html">Back</a></p>
+
+</font>
+</body>
+</html>
