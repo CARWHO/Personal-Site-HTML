@@ -13,49 +13,22 @@
 <h1>HireOS</h1>
 <p>July 2026 to present. <a href="https://hireos.co.nz">hireos.co.nz</a>.</p>
 
-<p>The front desk for hire companies. It picks up when the team can't, asks what they'd ask, and puts the call on the right job, recorded and written up. Built and sold solo. Live at Accent Productions, The Rock Factory, Triac Light &amp; Sound, Marquee Hire City, and NES Hire, with AV Media and Crown Events in the works.</p>
+<p>The front desk for hire companies. It picks up when the team can't and puts the call on the right job, recorded and written up. Built and sold solo. Live at Accent Productions, The Rock Factory, Triac Light &amp; Sound, Marquee Hire City, and NES Hire, with AV Media and Crown Events in the works.</p>
 
-<p>Accent Productions is my dad's company, same client as the <a href="accent-productions.html">2024 wind load analysis</a>. I built his website first. Then I built him software to run the jobs behind it. Other hire companies saw it and wanted it, so I made it standalone. Demoing it around, it was clear people wanted the phone answered far more than a whole new rental system. A missed call is a job that goes to whoever picked up. So the front desk became the product. It sits in front of whatever they already run, Current RMS or Rentman, and the HireOS RMS is there if they don't run one yet.</p>
+<p><img src="assets/hireos-call.webp" alt="A HireOS enquiry with the call written up as notes and the outcome" width="400"></p>
 
-<h2>What it does</h2>
+<p>Every call on the job it's about, written up.</p>
 
-<ul>
-<li>Answers when nobody does. The number rings the team first. If nobody picks up, the receptionist answers instead of voicemail.</li>
-<li>Every call recorded and written up, on the job it's about.</li>
-<li>Keeps the rental system current. The first call drafts the job. Every call after comes back to the same job for the team to accept.</li>
-<li>Texts get the same questions a caller does.</li>
-<li>Only says what the company lets it about prices. It never works out a total, that comes with the quote.</li>
-</ul>
+<p><img src="assets/hireos-rms.webp" alt="The drafted job in Current RMS with the gear list filled in" width="400"></p>
 
-<h2>The HireOS RMS</h2>
-
-<p>For companies with no rental system. Quoting, approval, payment, and crewing in one workspace, and the numbers land in Xero.</p>
-
-<p><img src="assets/hireos-events.jpg" alt="The HireOS events list for Accent Productions" width="600"></p>
-
-<p>The events list. Every job in one place with its phase and quote number.</p>
-
-<p><img src="assets/hireos-quote.jpg" alt="A HireOS quote page with the gear list and a booking dates changed notice" width="600"></p>
-
-<p>A quote. Gear gets picked automatically and HireOS flags it when the dates move.</p>
-
-<h2>Selling it</h2>
-
-<p>Before selling it to anyone else I went and asked whether they actually had the problem. The process is straight out of <a href="books/disciplined-entrepreneurship.html">Disciplined Entrepreneurship</a>.</p>
-
-<ul>
-<li>Research first. Scraped Reddit and three NZ Facebook groups for complaints, then 24 discovery interviews with NZ hire companies, the same five questions every time. 17 of 24 named the same pain: enquiries turn up under-specified and someone has to translate them before they can be quoted.</li>
-<li>On a demo I read their own words from the interview back to them, then ring the company's number on speaker, the receptionist takes the enquiry, and the drafted job appears in their own Current RMS while they watch. Say what is on screen, then stop talking.</li>
-<li>Every demo is scripted, transcribed, and the script revised from what landed. An advisor said I was showing the whole product, so now the demo is the wedge only: the phone gets answered, the enquiry comes back written up. The ask is an email address, a number to forward, and a Current RMS sign-in. Free for ten weeks.</li>
-</ul>
+<p>The job drafts itself in their rental system.</p>
 
 <h2>The important bits</h2>
 
 <ul>
-<li>An AI receptionist answers the phone over SIP and writes up the request as a proposed job. A person confirms it before it becomes a booking.</li>
-<li>Go and Postgres on Cloud Run, React on Bun. Gear allocation runs under advisory locks so two jobs cannot book the same kit. Customers and contractors get one link per action: approve, pay, feedback.</li>
-<li>Run like a proper engineering team even though it is one person lol. Nineteen ADRs, everything in Terraform, CI on every PR against a real Postgres, and green on main deploys itself. Scales to zero and a billing budget emails me before it gets expensive.</li>
-<li>Since 9 July 2026: about 248,000 lines, 928 commits, 338 pull requests, 105 issues. Code is private :)</li>
+<li>24 discovery interviews before selling anything. 17 named the same pain: enquiries arrive under-specified.</li>
+<li>Go and Postgres on Cloud Run, React on Bun, AI receptionist over SIP. Terraform, CI against a real Postgres, green on main deploys itself.</li>
+<li>Since 9 July 2026: about 248,000 lines and 928 commits. Code is private :)</li>
 </ul>
 
 <p><a href="index.html">Back</a></p>
